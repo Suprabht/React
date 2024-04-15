@@ -1,0 +1,15 @@
+.theme-day{
+    background-color: #fff;
+}
+
+.theme-day h1, h2{
+    color: #000;
+}
+
+.theme-night{
+    background-color: #676666;
+}
+
+.theme-night h1, h2{
+    color: #fff;
+}

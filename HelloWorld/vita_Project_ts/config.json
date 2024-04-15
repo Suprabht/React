@@ -1,4 +1,5 @@
 {
     "IsConsoleEnabled":true,
-    "IsErrorLogEnabled":true
+    "IsErrorLogEnabled":true,
+    "i18nDebug":true
 }

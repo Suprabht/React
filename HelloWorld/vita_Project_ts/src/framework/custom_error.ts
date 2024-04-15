@@ -24,6 +24,7 @@ class CustomError{
                 "Window Inner Width":window.innerWidth,
                 "Window Outer Width":window.outerWidth,
                 "Window Outer Height":window.outerHeight,
+                "Browser Language": window.navigator.language || (window.navigator as any).userLanguage,
                 "Error Message": message,
                 "Error Object": errorObject
             });
