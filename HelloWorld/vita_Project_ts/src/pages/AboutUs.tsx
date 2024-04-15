@@ -9,6 +9,7 @@ const AboutUs = () =>{
       let txt:any = Math.random();
       setInputText(txt) ;
       CustomConsole.log(txt);
+      (document.getElementById("demo") as any).value = 123
         try {
             (document.getElementById("demo") as any).value = 123
         } catch (err:any) {

@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +10,12 @@ import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import Page404 from './pages/Page404'
 import Navigation from './components/app/Navbar';
+import Config from "../config.json";
+import CustomError from './framework/custom_error'
+
 const App = () => {
+
+  
   const[theme, setTheme] = useState("day");
   const { t, i18n } = useTranslation();
 
@@ -23,16 +29,24 @@ const App = () => {
   const toggleTheme = () => {
     setTheme((theme === "day")?"night":"day")
   }
+ 
+  /**
+   * This onerror function is an special function to handle all unhandled error
+   * This is a centralize methord which will be applicable to all pages.
+   */
+  onerror = (message, source, lineno, colno, error) => {
+    CustomError.logUnhandledError(message,source, lineno, colno, error);
+    return (!Config.ShowUnHandledException);
+  };
 
   return (
     <>      
       <div className={`theme-${theme}`}>
         <h1 className='content'>
-           {t('greeting.hello')} 
-          {/*t('translations:hello_world')*/}<br></br>
-<span>
-  Browser Language: {lng}
-</span>
+          {t('translations:hello_world')}<br></br>
+          <span>
+            Browser Language: {lng}
+          </span>
         </h1><button onClick={toggleTheme}>Toggle Theme</button>
         <Header></Header>
         <BrowserRouter>
@@ -48,6 +62,7 @@ const App = () => {
       </div>
     </>
   )
+
 }
 
 export default App

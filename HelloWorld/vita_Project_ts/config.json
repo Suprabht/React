@@ -1,5 +1,6 @@
 {
     "IsConsoleEnabled":true,
     "IsErrorLogEnabled":true,
-    "i18nDebug":true
+    "ShowUnHandledException":true,
+    "i18nDebug":false
 }
