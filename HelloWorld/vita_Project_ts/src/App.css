@@ -2,8 +2,12 @@
     background-color: #fff;
 }
 
-.theme-day h1, h2{
+.theme-day h1{
     color: #000;
+}
+
+.theme-day h2{
+    color: #3e06c1;
 }
 
 .theme-night{

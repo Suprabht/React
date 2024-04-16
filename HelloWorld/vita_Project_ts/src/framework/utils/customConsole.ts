@@ -1,9 +1,9 @@
-import config from "../../config.json";
+import config from "../../../config.json";
 
 /**
  * Custom Console class for handeling console
  */
-class CustomConsole{
+export default class CustomConsole{
     static log(text:any)
     {
         if(config.IsConsoleEnabled)
@@ -16,4 +16,3 @@ class CustomConsole{
     *       - add other overloaded methords
     * */
 }
-export default CustomConsole;

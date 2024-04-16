@@ -8,14 +8,14 @@ import Header from './components/app/Header';
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
-import Page404 from './pages/Page404'
+import Page404 from './pages/errors/Page404'
 import Navigation from './components/app/Navbar';
 import Config from "../config.json";
-import CustomError from './framework/custom_error'
+import CustomError from './framework/utils/customError'
 
 const App = () => {
 
-  
+
   const[theme, setTheme] = useState("day");
   const { t, i18n } = useTranslation();
 

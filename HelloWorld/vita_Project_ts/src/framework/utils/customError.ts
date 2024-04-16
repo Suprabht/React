@@ -1,10 +1,10 @@
-import Config from "../../config.json";
-import CustomConsole from "./custom_console";
+import Config from "../../../config.json";
+import CustomConsole from "./customConsole";
 
 /**
  * Custom Error class for handeling error
  */
-class CustomError{
+export default class CustomError{
     /**
      * This methord is use to log error in handled error inside try catch block
      * @param message Custom Message while handling the error
@@ -78,4 +78,3 @@ class CustomError{
     }
 
 }
-export default CustomError;
