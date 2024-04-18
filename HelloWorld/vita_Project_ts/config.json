@@ -1,6 +1,15 @@
 {
     "IsConsoleEnabled":true,
     "IsErrorLogEnabled":true,
-    "ShowUnHandledException":true,
+    "ShowUnHandledException":false,
+    "DisableRightClick":false,
+    "DisableCut":false,
+    "DisableCopy":false,
+    "DisablePaste":false,
+    "PreventkeyF12":true,
+    "PreventCTRLShiftI":true,
+    "PreventCTRLShiftJ":false,
+    "PreventCTRLShiftC":false,
+    "PreventCTRLU":false,
     "i18nDebug":false
 }
