@@ -89,13 +89,7 @@ const App = () => {
     <>      
       <Header></Header>
       <div className={`theme-${theme}`}>
-        <h1 className='content'>
-          {t('translations:hello_world')}<br></br>
-          <span>
-          {t('translations:brwoser_language')}: {lng}
-          </span>
-        </h1><button onClick={toggleTheme}>Toggle Theme</button>
-
+      <button onClick={toggleTheme}>Toggle Theme</button>
         <BrowserRouter>
         <Navigation></Navigation>   
           <Routes>

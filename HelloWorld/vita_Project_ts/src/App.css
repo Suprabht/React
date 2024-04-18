@@ -1,7 +1,9 @@
 .theme-day{
     background-color: #fff;
 }
-
+.theme-day .menu{
+    margin-right: 20px;
+}
 .theme-day h1{
     color: #000;
 }
@@ -16,4 +18,8 @@
 
 .theme-night h1, h2{
     color: #fff;
+}
+
+.theme-night .menu{
+    margin-right: 20px;
 }
