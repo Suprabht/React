@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import CustomConsole from '../framework/utils/customConsole'
 import CustomError from '../framework/utils/customError'
+
 const AboutUs = () =>{
     const[inputText, setInputText] = useState("");
   

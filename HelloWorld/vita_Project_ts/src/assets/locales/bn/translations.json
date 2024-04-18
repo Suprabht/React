@@ -1,3 +1,5 @@
 {
-    "hello_world": "ওহে বিশ্ব!"
+    "hello_world": "ওহে বিশ্ব!",
+    "this_is_header": "এই হেডার",
+    "brwoser_language":"ব্রাউজার ভাষা"
 }

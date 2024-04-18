@@ -3,6 +3,9 @@ How to use Helper calss
 1. import Utils from './utils'
 2. Helper.areNullOrUndefined(["test"]);
 */
+import Config from "../../../config.json";
+import CustomError from './customError'
+
 
 export default class Helpers {
     static areNullOrUndefined(array: any[]): boolean

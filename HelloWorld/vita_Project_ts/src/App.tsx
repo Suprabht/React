@@ -1,24 +1,22 @@
 
 import {useState, useEffect} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import './App.css'
 import Header from './components/app/Header';
-import Home from './pages/Home'
-import AboutUs from './pages/AboutUs'
-import ContactUs from './pages/ContactUs'
-import Page404 from './pages/errors/Page404'
+
 import Navigation from './components/app/Navbar';
 import Config from "../config.json";
 import CustomError from './framework/utils/customError'
+import MenuItem from './menuItem';
 
 const App = () => {
 
 
   const[theme, setTheme] = useState("day");
   const { t, i18n } = useTranslation();
-
+  
   useEffect(() => {
     const lng = navigator.language;
     i18n.changeLanguage(lng);
@@ -35,28 +33,79 @@ const App = () => {
    * This is a centralize methord which will be applicable to all pages.
    */
   onerror = (message, source, lineno, colno, error) => {
-    CustomError.logUnhandledError(message,source, lineno, colno, error);
+    
+   CustomError.logUnhandledError(message,source, lineno, colno, error);
     return (!Config.ShowUnHandledException);
   };
 
+  /**
+   * Below code is to disable some of the events related to browser.
+   */
+  /*
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  document.addEventListener('copy', event => event.preventDefault());
+
+  document.addEventListener('cut', event => event.preventDefault());
+
+  document.addEventListener('paste', event => event.preventDefault());
+
+  document.onkeydown = function (event) {
+    //prevent key F12
+    if (event.keyCode === 123) {
+      event.preventDefault();
+    }
+
+    //prevent CTRL + Shift + I
+    if(event.ctrlKey && event.shiftKey && event.keyCode == 'I'.charCodeAt(0)){
+        return false;
+    }
+
+    //prevent CTRL + Shift + J
+    if(event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)){
+        return false;
+    }
+
+    //prevent CTRL + Shift + C
+    if(event.ctrlKey && event.shiftKey && event.keyCode == 'C'.charCodeAt(0)){
+       return false;
+    }
+
+    //prevent CTRL + U 
+    if(event.ctrlKey && event.keyCode == 'U'.charCodeAt(0)){ 
+       return false; 
+    } 
+  };
+
+  document.onmousedown = function (event) {
+    if (event.target === document.querySelector('.devtools-icon')) {
+      event.preventDefault();
+    }
+  };
+*/
+
+
   return (
     <>      
+      <Header></Header>
       <div className={`theme-${theme}`}>
         <h1 className='content'>
           {t('translations:hello_world')}<br></br>
           <span>
-            Browser Language: {lng}
+          {t('translations:brwoser_language')}: {lng}
           </span>
         </h1><button onClick={toggleTheme}>Toggle Theme</button>
-        <Header></Header>
+
         <BrowserRouter>
-          <Navigation></Navigation>   
-          <Routes>        
-            <Route index element={<Home></Home>}></Route>
-            <Route path="/home" element={<Home></Home>}></Route>
-            <Route path="/aboutus" element={<AboutUs></AboutUs>}></Route>
-            <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
-            <Route path="/*" element={<Page404></Page404>}></Route>
+        <Navigation></Navigation>   
+          <Routes>
+            {MenuItem.Routes().map((route:any, index:any) => (
+              <Route
+                key={index}
+                path={route.route}
+                Component={route.component}
+              />
+            ))}
           </Routes>
         </BrowserRouter>
       </div>
