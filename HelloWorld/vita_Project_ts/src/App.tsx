@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import './App.css'
-import Header from './components/app/Header';
+import {Header} from './components/app/Header';
 
-import Navigation from './components/app/Navbar';
+import {Navigation} from './components/app/Navbar';
 import MenuItem from './menuItem';
-import GlobalHandlers from './components/app/GlobalHandlers';
+import {GlobalHandlers} from './components/app/GlobalHandlers';
 
 const App = () => {
   const[theme, setTheme] = useState("day");

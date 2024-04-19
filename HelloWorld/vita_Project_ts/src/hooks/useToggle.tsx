@@ -14,7 +14,7 @@ import { useState } from "react"
  * and a function called toggleValue that toggles the value between true and false. The function 
  * accepts one parameter.
  */
-const useToggle = (defaultValue: boolean = false) => {
+export const useToggle = (defaultValue: boolean = false) => {
     const [value, setValue] = useState(defaultValue)
   
     const toggleValue = (value: any) => {
@@ -22,4 +22,3 @@ const useToggle = (defaultValue: boolean = false) => {
     }
     return [value, toggleValue] as const
 }
-export default useToggle;

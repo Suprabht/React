@@ -4,6 +4,7 @@ import routesData from './route.json';
 import AboutUs from "./pages/AboutUs";
 import {ContactUs}  from "./pages/ContactUs";
 import Home from "./pages/Home";
+import Todo from "./pages/Todo";
 import Page404 from './pages/errors/Page404'
 
 export default class MenuItem {
@@ -22,7 +23,7 @@ export default class MenuItem {
             )
         });
         //TODO: Need to remove
-        const Routes2 = [ Home, AboutUs, ContactUs,Page404]
+        const Routes2 = [ Home, AboutUs, ContactUs,Page404, Todo]
         return routeItems;
     };
 }

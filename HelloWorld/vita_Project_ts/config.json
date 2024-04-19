@@ -1,7 +1,7 @@
 {
     "IsConsoleEnabled":true,
     "IsErrorLogEnabled":true,
-    "ShowUnHandledException":false,
+    "ShowUnHandledException":true,
     "DisableRightClick":false,
     "DisableCut":false,
     "DisableCopy":false,

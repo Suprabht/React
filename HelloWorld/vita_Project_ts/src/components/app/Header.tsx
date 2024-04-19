@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-const Header = () =>{
+export const Header = () =>{
     const { t, i18n } = useTranslation();
 
     return(
@@ -11,4 +11,3 @@ const Header = () =>{
         
     );
 };
-export default Header;

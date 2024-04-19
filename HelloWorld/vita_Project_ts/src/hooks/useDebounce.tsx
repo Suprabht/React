@@ -4,7 +4,7 @@
  * hook from the React library and the useTimeout(2nd custom hook) custom hook.
  */
 import { useEffect } from "react"
-import useTimeout from "./useTimeout"
+import {useTimeout} from "./useTimeout"
 
 /**
  * The hook uses the useTimeout hook to create a timeout that will invoke the callback 
@@ -17,9 +17,8 @@ import useTimeout from "./useTimeout"
  * @param dependencies is an array of values that the hook should listen to for changes and 
  * re-run the callback if any of the changes.
  */
-const useDebounce = (callback:any, delay:number, dependencies:any) => {
+export const useDebounce = (callback:any, delay:number, dependencies:any) => {
     const { reset, clear } = useTimeout(callback, delay)
     useEffect(reset, [...dependencies, reset])
     useEffect(clear, [])
 }
-export default useDebounce;

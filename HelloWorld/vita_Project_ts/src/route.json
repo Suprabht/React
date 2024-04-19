@@ -3,24 +3,35 @@
     "route": "/",
     "component": "Home",
     "path":"./pages/Home",
-    "exact": true
+    "exact": true,
+    "isLinkVisible":true
   },
   {
     "route": "/aboutus",
     "component": "AboutUs",
     "path":"./pages/AboutUs",
-    "exact": true
+    "exact": true,
+    "isLinkVisible":true
   },
   {
     "route": "/contactus",
     "component": "ContactUs",
     "path":"./pages/ContactUs",
-    "exact": true
+    "exact": true,
+    "isLinkVisible":true
   },
   {
     "route": "/404",
     "component": "Page404",
     "path":"./pages/errors/Page404",
-    "exact": true
+    "exact": true,
+    "isLinkVisible":false
+  },
+  {
+    "route": "/Todo",
+    "component": "Todo",
+    "path":"./pages/Todo",
+    "exact": true,
+    "isLinkVisible":false
   }
 ]

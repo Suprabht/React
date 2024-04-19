@@ -1,7 +1,7 @@
 import CustomError from "../../framework/utils/customError";
 import Config from "./../../../config.json";
 
-const GlobalHandlers = () =>{
+export const GlobalHandlers = () =>{
     /**
    * This onerror function is an special function to handle all unhandled error
    * This is a centralize methord which will be applicable to all pages.
@@ -67,10 +67,3 @@ const GlobalHandlers = () =>{
         
     );
 };
-export default GlobalHandlers;
-// export default class GlobalHandlers {
-//     static onerror(message:any,source:any, lineno:any, colno:any, error:any): boolean {
-//         CustomError.logUnhandledError(message,source, lineno, colno, error);
-//         return (!Config.ShowUnHandledException);
-//     }
-// }

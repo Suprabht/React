@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import MenuItem from './../../menuItem';
 
-const Navigation = () =>{
+export const Navigation = () =>{
     return(
         <> 
             <nav>
@@ -15,4 +15,3 @@ const Navigation = () =>{
         </>
     );
 };
-export default Navigation

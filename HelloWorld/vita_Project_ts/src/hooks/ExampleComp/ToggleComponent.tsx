@@ -1,6 +1,6 @@
-import useToggle from "./../useToggle"
+import {useToggle} from "./../useToggle"
 
-const ToggleComponent = () => {
+export const ToggleComponent = () => {
   const [value, toggleValue] = useToggle(false)
   return (
     <div>
@@ -11,4 +11,3 @@ const ToggleComponent = () => {
     </div>
   )
 }
-export default ToggleComponent;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Helpers from '../framework/utils/helpers'
-import ToggleComponent from '../hooks/ExampleComp/ToggleComponent';
-import TimeoutComponent from '../hooks/ExampleComp/TimeoutComponent';
+import {ToggleComponent} from '../hooks/ExampleComp/ToggleComponent';
+import {TimeoutComponent} from '../hooks/ExampleComp/TimeoutComponent';
 
 interface IContactProps {
     email: any;

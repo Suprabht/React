@@ -13,7 +13,7 @@ import { useCallback, useEffect, useRef } from "react"
  * @returns The hook returns an object with two properties: reset and clear, 
  * functions that can be used to reset or clear the timeout.
  */
-const useTimeout = (callback:any, delay:any) => {
+export const useTimeout = (callback:any, delay:any) => {
     const callbackRef = useRef(callback)
     const timeoutRef = useRef()
   
@@ -41,4 +41,3 @@ const useTimeout = (callback:any, delay:any) => {
   
     return { reset, clear } as const
 }
-export default useTimeout;

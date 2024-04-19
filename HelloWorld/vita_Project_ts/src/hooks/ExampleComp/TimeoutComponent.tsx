@@ -1,7 +1,7 @@
 import { useState } from "react"
-import useTimeout from "./../useTimeout"
+import {useTimeout} from "./../useTimeout"
 
-const TimeoutComponent = () => {
+export const TimeoutComponent = () => {
     const [count, setCount] = useState(10)
     const { clear, reset } = useTimeout(() => setCount(0), 1000)
 
@@ -14,4 +14,3 @@ const TimeoutComponent = () => {
         </div>
     )
 }
-export default TimeoutComponent;
