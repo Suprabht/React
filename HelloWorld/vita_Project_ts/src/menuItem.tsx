@@ -18,7 +18,8 @@ export default class MenuItem {
                     route:  menuItem.route,
                     component: eval(menuItem.component),
                     exact: menuItem.exact,
-                    componentName: menuItem.component
+                    componentName: menuItem.component,
+                    isLinkVisible: menuItem.isLinkVisible
                 }
             )
         });

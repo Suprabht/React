@@ -32,6 +32,6 @@
     "component": "Todo",
     "path":"./pages/Todo",
     "exact": true,
-    "isLinkVisible":false
+    "isLinkVisible":true
   }
 ]
